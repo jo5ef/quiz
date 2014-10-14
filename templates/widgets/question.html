@@ -1,0 +1,16 @@
+{% load markup %}
+<h1>{{ question.title|markdown}}</h1>
+<div class="description">
+	{{ question.question|markdown }}
+</div>
+<form action="" method="POST">
+	{% for answer in question.answer_set.all %}
+		<div class="answer">
+			<input type="checkbox" name="a{{ answer.id }}"/>
+			{{ answer.answer|markdown }}
+		</div>
+	{% endfor %}
+	<p>
+		<input type="submit" value="Next Question" class="button"/>
+	</p>
+</form>

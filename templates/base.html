@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}styles.css">
+	</head>
+	<body class="{% block bodyclass %}{% endblock %}">
+		<div id="container">
+			<a href="/"><img alt="bwin.party" src="{{ STATIC_URL }}logo.png"/></a>
+			{% block content %}{% endblock %}
+			<div class="footer">
+				Copyright &copy; 2011 bwin.party digital enterntainment plc<br/>
+				The General Terms and Conditions of the company in their current form, which are available at <a href="https://www.bwin.com">bwin.com</a> apply.
+			</div>
+		</div>
+	</body>
+</html>

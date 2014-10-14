@@ -1,0 +1,20 @@
+<div id="countdown">
+	<span id="clock"></span>
+	<script type="text/javascript">
+		(function() {
+			var seconds = {{ quiz.remainingSeconds }};
+			var updateClock = function() {
+				seconds--;
+				if(seconds < 0) {
+					window.location.reload();
+				} else {
+					var c = { m: seconds / 60 | 0, s: seconds % 60 };
+					var clock = document.getElementById('clock');
+					clock.innerHTML = c.m + ':'	+ (c.s < 10 ? '0' : '') + c.s;
+				}
+			};
+			window.setInterval(updateClock, 1000);
+			updateClock();
+		})();
+	</script>
+</div>

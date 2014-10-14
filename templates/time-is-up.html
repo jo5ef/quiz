@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block bodyclass %}end{% endblock %}
+{% block title %}quiz ended{% endblock %}
+{% block content %}
+<div class="smallcontainer">
+	<h1>Your time is up!</h1>
+	<p>You scored <span class="score">{{ quiz.points }} points</span> and are now at rank <span class="rank">{{ quiz.evalRank }}</span> in the <a href="/highscores">high scores</a>!</p>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block bodyclass %}end{% endblock %}
+{% block title %}quiz ended{% endblock %}
+{% block content %}
+{% include "widgets/clock.html" %}
+<div class="smallcontainer">
+	<h1>You've answered all the questions!</h1>
+	<p>Please wait for the time to run out.</p>
+</div>
+{% endblock %}

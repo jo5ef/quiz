@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}bwin.party{% endblock %}
+{% block bodyclass %}video{% endblock %}
+{% block content %}
+<span style="font-size:36px;font-weight:bold;position:relative;left:208px">Software Engineering Quiz</span>
+<table style="margin-top: 40px">
+<tr>
+<td>
+<iframe style="border:0;height: 600px; width: 412px; padding-right: 40px" src="/highscores?iframe"></iframe>
+</td>
+<td>
+<video autoplay="autoplay" width="550" controls="controls" loop="loop" style="position: relative; top: -75px">
+	<source src="http://cdn.quiz.ocact.us/web/movie.mp4" type="video/mp4" />
+</video>
+</td>
+</tr>
+</table>
+{% endblock %}

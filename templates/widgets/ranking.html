@@ -1,0 +1,11 @@
+<h1>high scores</h1>
+<!-- number of participants: {{ totalPlayers }} -->
+<table>
+	{% for s in scores %}
+		<tr>
+			<td>{% ifchanged s.rank %}{{ s.rank }}{% endifchanged %}</td>
+			<td>{{ s.name }}</td>
+			<td>{{ s.points }}</td>
+		</tr>
+	{% endfor %}
+</table>

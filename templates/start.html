@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}start a quiz{% endblock %}
+{% block bodyclass %}start{% endblock %}
+{% block content %}
+<div class="smallcontainer">
+	<h1>Ready to prove your skills?!</h1>
+	<h2>Rules</h2>
+	<ul>
+		<li>You have three minutes.</li>
+		<li>Answer as many questions as you can.</li>
+		<li>Aim for <a href="/highscores">high scores</a> and win.</li>
+	</ul>
+	<form action="" method="post">
+		<p>
+			<label>your name
+				<input type="text" name="name" length="128" autocomplete="off"/>
+			</label>
+			<label>your email
+				<input type="text" name="email" length="128" autocomplete="off"/>
+			</label>
+			<label>your phone
+				<input type="text" name="phone" length="128" value="-" autocomplete="off"/>
+			</label>
+			<br/>
+			<input type="submit" value="_play for real" class="button"/>
+		</p>
+	</form>
+</div>
+{% endblock %}
