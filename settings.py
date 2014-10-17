@@ -2,7 +2,7 @@
 import datetime
 import os.path
 
-PRODUCTION = True
+PRODUCTION = False
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -100,7 +100,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    #'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
 )
 
 ROOT_URLCONF = 'quiz.urls'
@@ -122,12 +122,12 @@ INSTALLED_APPS = (
     #'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.markup',
-    'web'
+    'web',
     #'django.contrib.auth',
     #'django.contrib.contenttypes',
     #'django.contrib.sessions',
     #'django.contrib.sites',
-    #'django.contrib.messages',
+    'django.contrib.messages',
     #'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',

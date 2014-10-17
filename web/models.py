@@ -7,6 +7,7 @@ class Question(models.Model):
     title = models.CharField(max_length=1024)
     question = models.TextField(blank=True)
     visible = models.BooleanField()
+    difficulty = models.IntegerField()
     
     def __unicode__(self):
         return self.title

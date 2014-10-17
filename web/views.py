@@ -40,7 +40,7 @@ def quiz(request, quiz, digest):
             qa.save()
             answers.append(qa)
         
-        q.points += 16 if all([a.userAnswer == a.answer.correct for a in answers]) else 0
+        q.points += 2 * q.currentQuestion.difficulty if all([a.userAnswer == a.answer.correct for a in answers]) else 0
 
         q.currentQuestion = Quiz.nextQuestion(q)
         q.save()        
